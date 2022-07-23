@@ -1,5 +1,10 @@
 import React from 'react'
+import { About } from '../About'
 
 export const Layout = () => {
-	return <div>Layout</div>
+	return (
+		<main className='max-w-5xl mx-auto flex px-3 md:px-0 mt-[4.375rem]'>
+			<About />
+		</main>
+	)
 }
