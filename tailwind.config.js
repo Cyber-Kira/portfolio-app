@@ -6,29 +6,25 @@ module.exports = {
 		extend: {
 			fontFamily: {
 				montserrat: 'Montserrat, sans-serif',
-				raleway: 'Raleway, sans-serif',
 			},
 			boxShadow: {
-				button: '0px 4px 4px 0px rgba(0, 0, 0, 0.25)',
+				main: '0px 4px 32px rgba(0, 0, 0, 0.12);',
 			},
-			dropShadow: {
-				button: '0px 4px 4px rgba(0, 0, 0, 0.25)',
+			colors: {
+				transparent: 'transparent',
+				white: '#FFFFFF',
+				accent: '#2F80ED',
+				primary: '#828282',
+				dark: {
+					100: '#333333',
+					200: '#4F4F4F',
+				},
+				neutral: {
+					100: '#C4C4C4',
+					200: '#E0E0E0',
+				},
 			},
 		},
-		colors: {
-			transparent: 'transparent',
-			lightestGray: '#E7E7EB',
-			lightGray: '#A09FB1',
-			gray: '#88869D',
-			buttonLightGray: '#6E707A',
-			dimmedGray: '#616475',
-			backgroundLight: '#1E213A',
-			backgroundDark: '#100E1D',
-			darkBlue: '#110E3C',
-			accentBlue: '#3C47E9',
-			accentYellow: '#FFEC65',
-			buttonText: '#585676',
-		},
+		plugins: [],
 	},
-	plugins: [],
 }
