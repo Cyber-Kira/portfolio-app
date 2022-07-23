@@ -1,11 +1,27 @@
 import React from 'react'
+import { useSize } from '../../lib/hooks/useSize'
 import { Paper } from '../Paper'
 import ProfilePicture from './assets/photo.png'
 
 export const About = () => {
+	const { size, currentRef } = useSize()
+
+	const flexStyles =
+		size === 'mobile'
+			? {
+					flexDirection: 'column' as const,
+			  }
+			: {
+					flexDirection: 'row' as const,
+			  }
+
 	return (
 		<Paper shadow>
-			<section className='flex flex-col md:flex-row gap-8'>
+			<section
+				ref={currentRef}
+				className='flex flex-col gap-8'
+				style={flexStyles}
+			>
 				<div className='basis-[29%]'>
 					<img
 						className='w-full h-auto rounded-xl'
@@ -14,7 +30,10 @@ export const About = () => {
 					/>
 				</div>
 				<div className='basis-[71%]'>
-					<div className='flex flex-col md:flex-row gap-4 md:gap-0 justify-between'>
+					<div
+						className='flex flex-col gap-4 justify-between'
+						style={flexStyles}
+					>
 						<div>
 							<p className='font-semibold text-2xl leading-[29px] mb-[.375rem]'>
 								Kirill Koloskov
@@ -23,10 +42,10 @@ export const About = () => {
 								Front-end developer
 							</p>
 						</div>
-						<div className='flex flex-col gap-[.625rem]'>
+						<div className='flex flex-col gap-[.5rem]'>
 							<div>
 								<a
-									className='flex items-center gap-[1.125rem] font-medium text-lg leading-[22px] text-dark-200 hover:text-dark-100 transition-colors'
+									className='flex items-center gap-[1.125rem] font-medium text-lg leading-[22px] text-dark-200 hover:text-dark-100 transition-colors truncate'
 									href='mailto:kkoloskov03@gmail.com'
 								>
 									<span className='material-icons'>email</span>
