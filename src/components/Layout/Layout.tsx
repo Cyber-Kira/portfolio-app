@@ -3,9 +3,9 @@ import { About } from '../About'
 import { Blog } from '../Blog'
 import { Experiences } from '../Experiences'
 import { Hobbies } from '../Hobbies'
-import { Paper } from '../Paper'
 import { ProjectItem } from '../ProjectItem'
 import { Skills } from '../Skills'
+import { Title } from '../Title'
 
 export const Layout = () => {
 	return (
@@ -18,20 +18,16 @@ export const Layout = () => {
 					<Hobbies />
 				</div>
 				<div className='flex flex-col gap-4 md:col-span-7'>
-					<Paper>
-						<div className='flex items-center'>
-							<p>
-								Latest Project{' '}
-								{/* <span className='font-mono text-lg leading-[20px] text-primary'>
-								(3)
-							</span> */}
-							</p>
-							<span className='ml-auto'>more</span>
-						</div>
-					</Paper>
+					<Title title='Latest Project' />
 					<Blog />
-					<div className='flex flex-col gap-9'>
-						<ProjectItem />
+					<div className='flex flex-col gap-4'>
+						<Title
+							countable
+							title='Projects'
+							tags={['React', 'Responsive', 'Express']}
+						>
+							<ProjectItem />
+						</Title>
 					</div>
 				</div>
 			</div>
