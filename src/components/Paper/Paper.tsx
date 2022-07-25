@@ -4,16 +4,25 @@ export const Paper = ({
 	children,
 	shadow,
 	paddingRight,
+	paddingLeft,
+	paddingTop,
+	paddingBottom,
 }: {
 	children: React.ReactNode
 	shadow?: boolean
 	paddingRight?: number
+	paddingLeft?: number
+	paddingTop?: number
+	paddingBottom?: number
 }) => {
 	return (
 		<div
 			className='relative w-full rounded-xl p-[1.375rem] bg-white font-montserrat h-fit'
 			style={{
 				paddingRight,
+				paddingLeft,
+				paddingTop,
+				paddingBottom,
 			}}
 		>
 			{children}

@@ -1,16 +1,10 @@
 import React from 'react'
 import { useSize } from '../../lib/hooks/useSize'
 import { Paper } from '../Paper'
-import Gaming from './assets/arcade.webp'
 import GameDev from './assets/unity.webp'
 import Music from './assets/flstudio.png'
 
 const data = [
-	{
-		title: 'Gaming',
-		description: 'I love games and everything associated with them.',
-		img: Gaming,
-	},
 	{
 		title: 'Game Development',
 		description: 'In my spare time I like to create little games on Unity!',
@@ -19,7 +13,7 @@ const data = [
 	{
 		title: 'Music Production',
 		description:
-			"A game needs music, so me and my MIDI always ready to help. (and it's actually fun)",
+			"Sometimes i like to sample beats and play on my MIDI. (it's actually fun)",
 		img: Music,
 	},
 ]

@@ -6,6 +6,7 @@ module.exports = {
 		extend: {
 			fontFamily: {
 				montserrat: 'Montserrat, sans-serif',
+				roboto: 'Roboto, sans-serif',
 			},
 			boxShadow: {
 				main: '0px 4px 32px rgba(0, 0, 0, 0.12);',

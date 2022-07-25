@@ -1,7 +1,6 @@
 import React from 'react'
 import { useSize } from '../../lib/hooks/useSize'
 import { Paper } from '../Paper'
-import ProfilePicture from './assets/photo.png'
 
 export const ProjectItem = () => {
 	const { size, currentRef } = useSize()
@@ -26,7 +25,7 @@ export const ProjectItem = () => {
 				<div className='basis-[42%]'>
 					<img
 						className='w-full h-auto rounded-xl max-h-[267px] object-cover'
-						src={ProfilePicture}
+						src='https://i.ibb.co/BfHXPkN/screencapture-weather-app-67e25-web-app-2022-07-23-09-39-29.png'
 						alt='White Man'
 					/>
 				</div>
@@ -48,7 +47,7 @@ export const ProjectItem = () => {
 						</p>
 						<div className='flex items-center gap-3 mt-auto flex-wrap'>
 							<button
-								className='font-medium text-lg leading-[22px] text-white bg-accent hover:scale-105 rounded-xl pl-10 pr-[2.375rem] pt-[.8125rem] pb-[.6875rem] transition-transform'
+								className='font-medium text-lg leading-[22px] text-white bg-accent  hover:shadow-lg rounded-xl pl-10 pr-[2.375rem] pt-[.8125rem] pb-[.6875rem] transition-all'
 								type='button'
 							>
 								Demo
