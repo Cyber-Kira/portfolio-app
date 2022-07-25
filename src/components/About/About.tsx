@@ -2,6 +2,7 @@ import React from 'react'
 import { useSize } from '../../lib/hooks/useSize'
 import { Paper } from '../Paper'
 import ProfilePicture from './assets/photo.png'
+import { ReactComponent as CodewarsLogo } from './assets/codewars-svgrepo-com.svg'
 
 export const About = () => {
 	const { size, currentRef } = useSize()
@@ -35,9 +36,10 @@ export const About = () => {
 						style={flexStyles}
 					>
 						<div>
-							<p className='font-semibold text-2xl leading-[29px] mb-[.375rem]'>
+							<p className='flex items-center gap-3 font-semibold text-2xl leading-[29px] mb-[.375rem]'>
 								Kirill Koloskov
 							</p>
+
 							<p className='font-medium text-lg leading-[22px] text-primary'>
 								Front-end developer
 							</p>
@@ -69,7 +71,18 @@ export const About = () => {
 									rel='noreferrer'
 								>
 									<span className='material-icons'>code</span>
-									Cyber-Kira
+									GitHub
+								</a>
+							</div>
+							<div>
+								<a
+									href='https://www.codewars.com/users/Cyber-Kira'
+									rel='noreferrer'
+									target='_blank'
+									className='flex items-center gap-[1.125rem] font-medium text-lg leading-[22px] text-dark-200 hover:text-dark-100 transition-colors truncate'
+								>
+									<CodewarsLogo />
+									Codewars
 								</a>
 							</div>
 						</div>
