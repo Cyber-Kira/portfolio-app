@@ -17,7 +17,7 @@ export const Paper = ({
 }) => {
 	return (
 		<div
-			className='relative w-full rounded-xl p-[1.375rem] bg-white font-montserrat h-fit'
+			className='relative w-full rounded-xl p-[1.375rem] bg-white font-montserrat h-full'
 			style={{
 				paddingRight,
 				paddingLeft,
