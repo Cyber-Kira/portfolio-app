@@ -9,6 +9,16 @@ import { Skills } from '../Skills'
 import { Tags } from '../Tags'
 import { Title } from '../Title'
 
+const latestProject = {
+	tags: ['React', 'Typescript', 'Redux', 'Tailwind'],
+	title: 'Weather App',
+	description:
+		'An application to display weather for current location or using search. Using openweather API.',
+	imageLink: 'https://i.ibb.co/X3xMbQ5/Screenshot-from-2022-07-26-22-43-09.png',
+	demoLink: 'https://weather-app-67e25.web.app',
+	sourceLink: 'https://github.com/Cyber-Kira/weather-app',
+}
+
 export interface TagInterface {
 	name: string
 	isChecked: boolean
@@ -20,8 +30,14 @@ export const Layout = () => {
 	useEffect(() => {
 		setCurrentTags([
 			{ name: 'React', isChecked: false },
-			{ name: 'Express', isChecked: false },
-			{ name: 'Responsive', isChecked: false },
+			{ name: 'Redux', isChecked: false },
+			{ name: 'Typescript', isChecked: false },
+			{ name: 'Javascript', isChecked: false },
+			{ name: 'HTML', isChecked: false },
+			{ name: 'CSS', isChecked: false },
+			{ name: 'SASS', isChecked: false },
+			{ name: 'Tailwind', isChecked: false },
+			{ name: 'Course', isChecked: false },
 		])
 	}, [])
 
@@ -53,9 +69,16 @@ export const Layout = () => {
 								</button>
 							</div>
 						</Title>
-						<ProjectItem />
+						<ProjectItem
+							title={latestProject.title}
+							description={latestProject.description}
+							tags={latestProject.tags}
+							imageLink={latestProject.imageLink}
+							demoLink={latestProject.demoLink}
+							sourceLink={latestProject.sourceLink}
+						/>
 					</div>
-					<div className='flex flex-col gap-4'>
+					<div className='flex flex-col gap-4 items-stretch'>
 						<Title title='Blog' />
 						<Blog />
 					</div>
@@ -64,7 +87,7 @@ export const Layout = () => {
 			<div className='flex flex-col gap-4'>
 				<Title
 					title='Projects'
-					count={3}
+					count={22}
 					tags={<Tags tags={currentTags} setTags={setCurrentTags} />}
 				/>
 				<Pagination itemsPerPage={3} />
