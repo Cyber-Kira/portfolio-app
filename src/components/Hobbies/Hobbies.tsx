@@ -58,7 +58,7 @@ export const Hobbies = () => {
 						>
 							{data.map(item => {
 								return (
-									<div className='flex gap-4'>
+									<div key={item.title} className='flex gap-4'>
 										<div className='w-full'>
 											<img
 												className='w-full h-auto max-h-[8.625rem] object-cover rounded-xl'

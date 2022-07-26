@@ -58,7 +58,7 @@ export const Experiences = () => {
 						<div className='flex justify-between gap-4' style={flexStyles}>
 							{data.map(item => {
 								return (
-									<div className='flex gap-4'>
+									<div key={item.title} className='flex gap-4'>
 										<img className='w-16 h-16' src={item.img} alt='Medscan' />
 										<div>
 											<p className='font-medium text-sm leading-[17px] text-primary'>

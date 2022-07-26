@@ -55,7 +55,7 @@ export const Skills = () => {
 						<ul className='w-full grid grid-cols-2 gap-4' style={layoutStyles}>
 							{data.map(item => {
 								return (
-									<li className='flex items-center'>
+									<li key={item.name} className='flex items-center'>
 										<span className='font-medium text-base leading-[20px] text-dark-200 basis-3/6'>
 											{item.name}
 										</span>

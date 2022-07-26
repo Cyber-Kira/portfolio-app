@@ -29,38 +29,36 @@ export const Tags = ({
 	}
 
 	return (
-		<div className='flex gap-4 mt-4 flex-wrap'>
+		<ul className='flex gap-4 mt-4 flex-wrap'>
 			{tags.map(tag => {
 				return (
-					<ul>
-						<li className='relative w-full h-full rounded-xl group'>
-							<label htmlFor='tags'>
-								<input
-									className='absolute cursor-pointer inset-0 appearance-none'
-									type='checkbox'
-									name='tags'
-									id={tag.name}
-									value={tag.name}
-									checked={tag.isChecked}
-									onChange={e => handleClick(e, tag.name)}
-								/>
-							</label>
-							<button
-								className={`
+					<li key={tag.name} className='relative h-full rounded-xl group'>
+						<label htmlFor='tags'>
+							<input
+								className='absolute cursor-pointer inset-0 appearance-none'
+								type='checkbox'
+								name='tags'
+								id={tag.name}
+								value={tag.name}
+								checked={tag.isChecked}
+								onChange={e => handleClick(e, tag.name)}
+							/>
+						</label>
+						<button
+							className={`
                     font-medium text-sm leading-[17px] px-[22px] py-2 text-dark-200 border border-dark-200 group-hover:border-accent rounded-xl transition-colors ${
 											tag.isChecked
 												? 'bg-accent text-white border-accent'
 												: 'group-hover:text-accent'
 										}
                     `}
-								type='button'
-							>
-								{tag.name}
-							</button>
-						</li>
-					</ul>
+							type='button'
+						>
+							{tag.name}
+						</button>
+					</li>
 				)
 			})}
-		</div>
+		</ul>
 	)
 }

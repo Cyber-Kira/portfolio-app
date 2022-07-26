@@ -5,7 +5,7 @@ import { useResize } from './useResize'
 export const useSize = () => {
 	const currentRef = useRef<HTMLElement>(null)
 	const { width } = useResize(currentRef)
-	const [size, setSize] = useState<'mobile' | 'desktop' | null>(null)
+	const [size, setSize] = useState<'mobile' | 'desktop' | null>('mobile')
 
 	useEffect(() => {
 		if (width < 700) {
