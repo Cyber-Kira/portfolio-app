@@ -48,7 +48,7 @@ export const Experiences = () => {
 		<Paper shadow>
 			<section ref={currentRef}>
 				<span
-					className='block font-medium text-2xl leading-[29px] text-dark-200'
+					className='block font-medium text-2xl leading-[29px] text-dark-200 dark:text-neutral-200'
 					style={marginStyles}
 				>
 					Experiences
@@ -61,13 +61,13 @@ export const Experiences = () => {
 									<div key={item.title} className='flex gap-4'>
 										<img className='w-16 h-16' src={item.img} alt='Medscan' />
 										<div>
-											<p className='font-medium text-sm leading-[17px] text-primary'>
+											<p className='font-medium text-sm leading-[17px] text-primary dark:text-neutral-100'>
 												{item.workingPeriod}
 											</p>
-											<p className='font-semibold text-base leading-[20px] text-dark-100 mt-3 mb-8'>
+											<p className='font-semibold text-base leading-[20px] text-dark-100 dark:text-neutral-200 mt-3 mb-8'>
 												{item.title}
 											</p>
-											<p className='font-medium text-base leading-[20px] text-primary'>
+											<p className='font-medium text-base leading-[20px] text-primary dark:text-neutral-100'>
 												{item.description}
 											</p>
 										</div>

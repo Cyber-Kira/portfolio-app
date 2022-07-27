@@ -40,14 +40,14 @@ export const About = () => {
 								Kirill Koloskov
 							</p>
 
-							<p className='font-medium text-lg leading-[22px] text-primary'>
+							<p className='font-medium text-lg leading-[22px] text-primary dark:text-neutral-100'>
 								Front-end developer
 							</p>
 						</div>
 						<div className='flex flex-col gap-[.5rem]'>
 							<div>
 								<a
-									className='flex items-center gap-[1.125rem] font-medium text-lg leading-[22px] text-dark-200 hover:text-dark-100 transition-colors truncate'
+									className='flex items-center gap-[1.125rem] font-medium text-lg leading-[22px] text-dark-200 dark:text-neutral-100 hover:text-dark-100 transition-colors truncate'
 									href='mailto:kkoloskov03@gmail.com'
 								>
 									<span className='material-icons'>email</span>
@@ -56,7 +56,7 @@ export const About = () => {
 							</div>
 							<div>
 								<a
-									className='flex items-center gap-[1.125rem] font-medium text-lg leading-[22px] text-dark-200 hover:text-dark-100 transition-colors'
+									className='flex items-center gap-[1.125rem] font-medium text-lg leading-[22px] text-dark-200 dark:text-neutral-100 hover:text-dark-100 transition-colors'
 									href='tel:+79586649924'
 								>
 									<span className='material-icons'>call</span>
@@ -65,7 +65,7 @@ export const About = () => {
 							</div>
 							<div>
 								<a
-									className='flex items-center gap-[1.125rem] font-medium text-lg leading-[22px] text-dark-200 hover:text-dark-100 transition-colors'
+									className='flex items-center gap-[1.125rem] font-medium text-lg leading-[22px] text-dark-200 dark:text-neutral-100 hover:text-dark-100 transition-colors'
 									href='https://github.com/Cyber-Kira/'
 									target='_blank'
 									rel='noreferrer'
@@ -79,16 +79,16 @@ export const About = () => {
 									href='https://www.codewars.com/users/Cyber-Kira'
 									rel='noreferrer'
 									target='_blank'
-									className='flex items-center gap-[1.125rem] font-medium text-lg leading-[22px] text-dark-200 hover:text-dark-100 transition-colors truncate'
+									className='flex items-center gap-[1.125rem] font-medium text-lg leading-[22px] text-dark-200 dark:text-neutral-100 hover:text-dark-100 transition-colors truncate'
 								>
-									<CodewarsLogo />
+									<CodewarsLogo className='dark:fill-neutral-100' />
 									Codewars
 								</a>
 							</div>
 						</div>
 					</div>
 					<div className='mt-9 flex flex-col gap-4'>
-						<p className='font-medium text-lg leading-[22px] text-primary'>
+						<p className='font-medium text-lg leading-[22px] text-primary dark:text-neutral-100'>
 							Self-motivated developer, who is willing to learn and create
 							outstanding UI applications.
 						</p>

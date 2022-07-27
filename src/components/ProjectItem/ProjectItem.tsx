@@ -24,6 +24,14 @@ export const ProjectItem = ({
 					flexDirection: 'row' as const,
 			  }
 
+	const heightStyles =
+		size === 'mobile'
+			? {}
+			: {
+					height: '100%',
+					maxHeight: '100%',
+			  }
+
 	return (
 		<Paper shadow>
 			<section
@@ -32,9 +40,9 @@ export const ProjectItem = ({
 				style={flexStyles}
 			>
 				<div className='basis-[42%] h-full'>
-					<div className='max-h-[150px] h-[150px]'>
+					<div className='max-h-[150px] h-[150px]' style={heightStyles}>
 						<img
-							className='w-full max-h-full rounded-xl object-cover'
+							className='w-full h-full max-h-full rounded-xl object-cover'
 							src={imageLink}
 							alt={title}
 							loading='lazy'
@@ -44,15 +52,15 @@ export const ProjectItem = ({
 				</div>
 				<div className='basis-[58%]'>
 					<div className='flex flex-col h-full'>
-						<ul className='flex flex-wrap gap-2 font-medium text-base leading-[20px] text-dark-200'>
+						<ul className='flex flex-wrap gap-2 font-medium text-base leading-[20px] text-dark-200 dark:text-neutral-200'>
 							{tags.map(tag => {
 								return <li key={tag}>#{tag}</li>
 							})}
 						</ul>
-						<span className='font-medium text-2xl leading-[29px] text-dark-100 mt-[1.5625rem] mb-[1.125rem]'>
+						<span className='font-medium text-2xl leading-[29px] text-dark-100 dark:text-neutral-200 mt-[1.5625rem] mb-[1.125rem]'>
 							{title}
 						</span>
-						<p className='font-medium text-base leading-[20px] text-primary mb-[2.5625rem]'>
+						<p className='font-medium text-base leading-[20px] text-primary dark:text-neutral-100 mb-[2.5625rem]'>
 							{description}
 						</p>
 						<div className='flex items-center gap-3 mt-auto flex-wrap'>

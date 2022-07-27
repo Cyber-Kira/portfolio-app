@@ -28,7 +28,7 @@ export const Hobbies = () => {
 					gap: '2.25rem',
 			  }
 			: {
-					gridTemplateColumns: 'repeat(3, minmax(0, 1fr))',
+					gridTemplateColumns: 'repeat(2, minmax(0, 1fr))',
 					gap: '4.5rem',
 			  }
 
@@ -45,7 +45,7 @@ export const Hobbies = () => {
 		<Paper shadow>
 			<section ref={currentRef}>
 				<span
-					className='block font-medium text-2xl leading-[29px] text-dark-200'
+					className='block font-medium text-2xl leading-[29px] text-dark-200 dark:text-neutral-200'
 					style={marginStyles}
 				>
 					Hobbies
@@ -61,14 +61,14 @@ export const Hobbies = () => {
 									<div key={item.title} className='flex gap-4'>
 										<div className='w-full'>
 											<img
-												className='w-full h-auto max-h-[8.625rem] object-cover rounded-xl'
+												className='w-full h-[140px] max-h-[8.625rem] object-cover rounded-xl'
 												src={item.img}
 												alt='Medscan'
 											/>
-											<p className='font-semibold text-lg leading-[22px] text-dark-100 mt-[1.625rem] mb-[.625rem]'>
+											<p className='font-semibold text-lg leading-[22px] text-dark-100 dark:text-neutral-200 mt-[1.625rem] mb-[.625rem]'>
 												{item.title}
 											</p>
-											<p className='font-medium text-base leading-[20px] text-primary'>
+											<p className='font-medium text-base leading-[20px] text-primary dark:text-neutral-100'>
 												{item.description}
 											</p>
 										</div>

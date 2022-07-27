@@ -1,7 +1,10 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import React, { useEffect, useState } from 'react'
+import { setTheme } from '../../lib/utils'
 import { About } from '../About'
 import { Blog } from '../Blog'
 import { Experiences } from '../Experiences'
+import { Features } from '../Features'
 import { Hobbies } from '../Hobbies'
 import { Pagination, ProjectsInterface } from '../Pagination'
 import { ProjectItem } from '../ProjectItem'
@@ -19,7 +22,6 @@ const latestProject = {
 	sourceLink: 'https://github.com/Cyber-Kira/weather-app',
 }
 
-// TODO: Create API
 const projects = [
 	{
 		tags: ['React', 'Typescript', 'Redux', 'Tailwind'],
@@ -67,6 +69,15 @@ const projects = [
 			'A reusable button with all the states in the design and a page displaying all the states.',
 		imageLink: 'https://i.ibb.co/B3DrHBj/1.png',
 		demoLink: 'https://devchallenges-63e63.web.app/',
+		sourceLink: 'https://github.com/Cyber-Kira/button-component',
+	},
+	{
+		tags: ['React', 'Typescript', 'SASS'],
+		title: 'Input Component',
+		description:
+			'A reusable input with all the states in the design and a page displaying all the states.',
+		imageLink: 'https://i.ibb.co/B3DrHBj/1.png',
+		demoLink: 'https://devchallenges-63e63.web.app/inputs',
 		sourceLink: 'https://github.com/Cyber-Kira/button-component',
 	},
 	{
@@ -255,6 +266,7 @@ export const Layout = () => {
 	}
 
 	useEffect(() => {
+		setTheme(localStorage.theme ?? 'light')
 		setCurrentTags([
 			{ name: 'React', isChecked: false },
 			{ name: 'Redux', isChecked: false },
@@ -275,15 +287,15 @@ export const Layout = () => {
 	}, [currentTags])
 
 	return (
-		<main className='max-w-5xl mx-auto flex flex-col gap-9 px-3 md:px-0 my-6 md:mt-[4.375rem]'>
+		<main className='max-w-6xl mx-auto flex flex-col gap-9 px-3 md:px-0 my-6 md:mt-[4.375rem]'>
+			<Features />
 			<About />
 			<div className='grid md:grid-cols-12 gap-[2.1875rem] auto-rows-min'>
-				<div className='flex flex-col gap-9 md:col-span-5'>
+				<div className='flex flex-col gap-9 md:col-span-4'>
 					<Skills />
 					<Experiences />
-					<Hobbies />
 				</div>
-				<div className='flex flex-col gap-9 md:col-span-7'>
+				<div className='flex flex-col gap-9 md:col-span-8'>
 					<div className='flex flex-col gap-4'>
 						<Title>
 							<div className='flex'>
@@ -315,8 +327,9 @@ export const Layout = () => {
 						/>
 					</div>
 					<div className='flex flex-col gap-4 items-stretch'>
-						<Title title='Blog' />
-						<Blog />
+						<Hobbies />
+						{/* <Title title='Blog' />
+						<Blog /> */}
 					</div>
 				</div>
 			</div>

@@ -56,7 +56,7 @@ export const Skills = () => {
 							{data.map(item => {
 								return (
 									<li key={item.name} className='flex items-center'>
-										<span className='font-medium text-base leading-[20px] text-dark-200 basis-3/6'>
+										<span className='font-medium text-base leading-[20px] text-dark-200 dark:text-neutral-100 basis-3/6'>
 											{item.name}
 										</span>
 										<SkillProgression width={item.progress} />

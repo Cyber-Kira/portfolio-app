@@ -72,14 +72,14 @@ export const Pagination = ({
 				breakClassName='w-[2.25rem] h-[2.25rem] flex items-center justify-center'
 				breakLinkClassName='font-roboto text-[22px] text-dark-200 flex items-center justify-center select-none'
 				nextLabel={<span className='material-icons'>chevron_right</span>}
-				nextClassName='border border-dark-200 rounded-[.25rem] w-[2.25rem] h-[2.25rem]'
+				nextClassName='border border-dark-200 hover:border-accent hover:text-accent dark:hover:text-accent dark:hover:border-accent dark:border-neutral-200 rounded-[.25rem] w-[2.25rem] h-[2.25rem] transition-colors'
 				nextLinkClassName='font-roboto text-[.75rem] leading-[.875rem] font-normal w-full h-full flex items-center justify-center select-none'
 				previousLabel={<span className='material-icons'>chevron_left</span>}
-				previousClassName='border border-dark-200 rounded-[.25rem] w-[2.25rem] h-[2.25rem]'
+				previousClassName='border border-dark-200 hover:border-accent hover:text-accent dark:hover:text-accent dark:hover:border-accent dark:border-neutral-200 dark:text-neutral-200 rounded-[.25rem] w-[2.25rem] h-[2.25rem] transition-colors'
 				previousLinkClassName='font-roboto text-[.75rem] leading-[.875rem] font-normal w-full h-full flex items-center justify-center select-none'
-				activeClassName='border-accent'
+				activeClassName='border-accent dark:border-accent'
 				activeLinkClassName='bg-accent text-white'
-				pageClassName='border border-dark-200 rounded-[4px] w-[2.25rem] h-[2.25rem] hover:border-accent hover:text-accent transition-colors'
+				pageClassName='border border-dark-200 dark:border-neutral-200 dark:text-neutral-200 rounded-[4px] w-[2.25rem] h-[2.25rem] hover:border-accent dark:hover:border-accent dark:hover:text-accent hover:text-accent transition-colors'
 				pageLinkClassName='font-roboto text-[.75rem] leading-[.875rem] font-normal w-full h-full flex items-center justify-center select-none'
 				containerClassName='flex gap-4 self-end mt-4'
 				onPageChange={handlePageClick}

@@ -46,9 +46,9 @@ export const Tags = ({
 						</label>
 						<button
 							className={`
-                    font-medium text-sm leading-[17px] px-[22px] py-2 text-dark-200 border border-dark-200 group-hover:border-accent rounded-xl transition-colors ${
+                    font-medium text-sm leading-[17px] px-[22px] py-2 text-dark-200 dark:text-neutral-100 border border-dark-200 dark:border-neutral-100 group-hover:border-accent rounded-xl transition-colors ${
 											tag.isChecked
-												? 'bg-accent text-white border-accent'
+												? 'bg-accent text-white border-accent dark:border-accent dark:text-white'
 												: 'group-hover:text-accent'
 										}
                     `}
