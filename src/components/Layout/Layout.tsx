@@ -5,6 +5,7 @@ import { About } from '../About'
 import { Blog } from '../Blog'
 import { Experiences } from '../Experiences'
 import { Features } from '../Features'
+import { Footer } from '../Footer'
 import { Hobbies } from '../Hobbies'
 import { Pagination, ProjectsInterface } from '../Pagination'
 import { ProjectItem } from '../ProjectItem'
@@ -287,61 +288,64 @@ export const Layout = () => {
 	}, [currentTags])
 
 	return (
-		<main className='max-w-6xl mx-auto flex flex-col gap-9 px-3 md:px-0 my-6 md:mt-[4.375rem]'>
-			<Features />
-			<About />
-			<div className='grid md:grid-cols-12 gap-[2.1875rem] auto-rows-min'>
-				<div className='flex flex-col gap-9 md:col-span-4'>
-					<Skills />
-					<Experiences />
-				</div>
-				<div className='flex flex-col gap-9 md:col-span-8'>
-					<div className='flex flex-col gap-4'>
-						<Title>
-							<div className='flex'>
-								<span>Latest Project</span>
-								<button
-									type='button'
-									onClick={() => {
-										const top = document.getElementById('Projects')?.offsetTop
+		<>
+			<main className='max-w-6xl mx-auto flex flex-col gap-9 px-3 md:px-0 my-6 md:mt-[4.375rem]'>
+				<Features />
+				<About />
+				<div className='grid md:grid-cols-12 gap-[2.1875rem] auto-rows-min'>
+					<div className='flex flex-col gap-9 md:col-span-4'>
+						<Skills />
+						<Experiences />
+					</div>
+					<div className='flex flex-col gap-9 md:col-span-8'>
+						<div className='flex flex-col gap-4'>
+							<Title>
+								<div className='flex'>
+									<span>Latest Project</span>
+									<button
+										type='button'
+										onClick={() => {
+											const top = document.getElementById('Projects')?.offsetTop
 
-										if (top)
-											window.scrollTo({
-												top,
-												behavior: 'smooth',
-											})
-									}}
-									className='ml-auto hover:text-accent transition-colors'
-								>
-									more
-								</button>
-							</div>
-						</Title>
-						<ProjectItem
-							title={latestProject.title}
-							description={latestProject.description}
-							tags={latestProject.tags}
-							imageLink={latestProject.imageLink}
-							demoLink={latestProject.demoLink}
-							sourceLink={latestProject.sourceLink}
-						/>
-					</div>
-					<div className='flex flex-col gap-4 items-stretch'>
-						<Hobbies />
-						{/* <Title title='Blog' />
+											if (top)
+												window.scrollTo({
+													top,
+													behavior: 'smooth',
+												})
+										}}
+										className='ml-auto hover:text-accent transition-colors'
+									>
+										more
+									</button>
+								</div>
+							</Title>
+							<ProjectItem
+								title={latestProject.title}
+								description={latestProject.description}
+								tags={latestProject.tags}
+								imageLink={latestProject.imageLink}
+								demoLink={latestProject.demoLink}
+								sourceLink={latestProject.sourceLink}
+							/>
+						</div>
+						<div className='flex flex-col gap-4 items-stretch'>
+							<Hobbies />
+							{/* <Title title='Blog' />
 						<Blog /> */}
+						</div>
 					</div>
 				</div>
-			</div>
-			<div className='flex flex-col gap-4' id='Projects'>
-				<Title
-					title='Projects'
-					count={filteredProjects.length}
-					tags={<Tags tags={currentTags} setTags={setCurrentTags} />}
-				/>
-				<Pagination projects={filteredProjects} itemsPerPage={3} />
-			</div>
-			<div className='message-wrapper' />
-		</main>
+				<div className='flex flex-col gap-4' id='Projects'>
+					<Title
+						title='Projects'
+						count={filteredProjects.length}
+						tags={<Tags tags={currentTags} setTags={setCurrentTags} />}
+					/>
+					<Pagination projects={filteredProjects} itemsPerPage={3} />
+				</div>
+				<div className='message-wrapper' />
+			</main>
+			<Footer />
+		</>
 	)
 }
