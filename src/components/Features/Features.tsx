@@ -1,5 +1,4 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
-import React, { useContext, useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { setTheme } from '../../lib/utils'
 
 export const Features = () => {
@@ -29,7 +28,7 @@ export const Features = () => {
 			<div className='flex items-center justify-center ml-auto w-fit h-10 rounded-full bg-white dark:bg-[#1e293b]'>
 				<button
 					type='button'
-					className={`flex items-center rotate-180 justify-center rounded-full w-full h-full p-2 hover:text-accent dark:text-neutral-200 dark:hover:text-accent cursor-pointer transition-all ${
+					className={`flex hidden items-center rotate-180 justify-center rounded-full w-full h-full p-2 hover:text-accent dark:text-neutral-200 dark:hover:text-accent cursor-pointer transition-all ${
 						isExpanded ? 'rotate-180' : 'rotate-0'
 					}`}
 					onClick={handleExpanding}
@@ -37,7 +36,7 @@ export const Features = () => {
 					<span className='material-icons'>chevron_left</span>
 				</button>
 				<div
-					className={`w-full h-full rounded-full ${
+					className={`w-full hidden h-full rounded-full ${
 						isExpanded ? 'overflow-visible' : 'overflow-hidden w-0'
 					}`}
 				>

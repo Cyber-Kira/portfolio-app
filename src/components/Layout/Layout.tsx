@@ -341,6 +341,7 @@ export const Layout = () => {
 				/>
 				<Pagination projects={filteredProjects} itemsPerPage={3} />
 			</div>
+			<div className='message-wrapper' />
 		</main>
 	)
 }
