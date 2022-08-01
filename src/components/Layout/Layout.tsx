@@ -101,6 +101,15 @@ const projects = [
 		sourceLink: 'https://cyber-kira.github.io/checkout-page',
 	},
 	{
+		tags: ['React', 'Typescript', 'Redux', "Tailwind"],
+		title: 'Github Jobs',
+		description: 'This project was abandoned due to ',
+		imageLink:
+			'https://ibb.co/D9fwqzX',
+		demoLink: 'https://githubjobs-94cd2.web.app',
+		sourceLink: 'https://github.com/Cyber-Kira/github-jobs',
+	},
+	{
 		tags: ['HTML', 'SASS'],
 		title: 'Edie Homepage',
 		description: "Single page Edie's startup page with responsive design.",
