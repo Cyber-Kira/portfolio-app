@@ -105,7 +105,7 @@ const projects = [
 		title: 'Github Jobs',
 		description: 'This project was abandoned due to ',
 		imageLink:
-			'https://ibb.co/D9fwqzX',
+			'https://i.ibb.co/30kh7pX/screencapture-githubjobs-94cd2-web-app-2022-08-01-13-14-13.png',
 		demoLink: 'https://githubjobs-94cd2.web.app',
 		sourceLink: 'https://github.com/Cyber-Kira/github-jobs',
 	},
