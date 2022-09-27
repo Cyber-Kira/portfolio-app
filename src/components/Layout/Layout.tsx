@@ -25,6 +25,26 @@ const latestProject = {
 
 const projects = [
 	{
+		tags: ['React', 'Typescript', 'Express', 'Tailwind'],
+		title: 'My Unsplash',
+		description:
+			'An application to upload and view images.',
+		imageLink:
+			'https://i.ibb.co/p0BqQFr/da0ca8db-8b95-4213-98be-546903a4edc0.png',
+		demoLink: 'https://stirring-paletas-f5ab8e.netlify.app/',
+		sourceLink: 'https://github.com/Cyber-Kira/my-unsplash',
+	},
+	{
+		tags: ['React', 'Typescript', 'Express', 'Tailwind'],
+		title: 'Image Uploader',
+		description:
+			'An application to upload images.',
+		imageLink:
+			'https://i.ibb.co/wrW96kT/Image-Uploader.png',
+		demoLink: 'https://chic-praline-3efcca.netlify.app/',
+		sourceLink: 'https://github.com/Cyber-Kira/image-uploader',
+	},
+	{
 		tags: ['React', 'Typescript', 'Redux', 'Tailwind'],
 		title: 'Weather App',
 		description:
